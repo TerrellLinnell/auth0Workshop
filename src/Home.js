@@ -1,13 +1,14 @@
-import React, {Component, PropTypes as T} from 'react';
+import React from 'react';
+import { Button } from 'react-bootstrap';
 
-export class Home extends Component {
-  render = () => {
-    return (
-      <div>
-        <h1>Logged In</h1>
-      </div>
-    );
-  }
+const Home = (props) => {
+  return (
+    <div>
+      <h1>Logged In</h1>
+      <h3>Welcome: {props.auth.getUser()}</h3>
+      <Button bsStyle='primary' onClick={() => {props.auth.logout(); window.location='/';}}>Logout</Button>
+    </div>
+  );
 }
 
 export default Home;

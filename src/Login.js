@@ -2,7 +2,7 @@ import React, { Component, PropTypes as T } from 'react'
 import {ButtonToolbar, Button} from 'react-bootstrap'
 import AuthService from './AuthService'
 
-export class Login extends Component {
+class Login extends Component {
   static propTypes = {
     location: T.object,
     auth: T.instanceOf(AuthService)
